@@ -24,6 +24,7 @@ class CreateCredentialstable extends Migration
             $table->string('Latitude');
             $table->string('Longitude');
             $table->string('ImageURL');
+            $table->timestamps();
         });
     }
 
