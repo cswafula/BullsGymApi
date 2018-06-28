@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ Credentials;
+use App\Credentials;
 
 class CredentialsController extends Controller
 {
@@ -12,7 +12,7 @@ class CredentialsController extends Controller
         return $User->toArray();
     }
     public function Register(){
-        $Register=new Register();
+        $Register=new Credentials();
         $Register->Email=request('Email');
         $Register->Password=request('Password');
         $Register->Gender=request('Gender');
