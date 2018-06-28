@@ -9,7 +9,7 @@ class CredentialsController extends Controller
 {
     public function Login($Email,$Pass){
         $User=Credentials::all()->where("Email",$Email)->where("Password",$Pass);
-        return json_encode(['user'=>$User]);
+        return json_encode(['user'=>$User],200);
     }
     public function Register(){
         $Register=new Credentials();
