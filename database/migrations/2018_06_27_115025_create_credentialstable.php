@@ -13,7 +13,7 @@ class CreateCredentialstable extends Migration
      */
     public function up()
     {
-         Schema::create('Credentials', function (Blueprint $table) {
+         Schema::create('credentials', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Email');
             $table->string('Password');
