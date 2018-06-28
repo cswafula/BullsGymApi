@@ -9,7 +9,7 @@ class CredentialsController extends Controller
 {
     public function Login($Email,$Pass){
         $User=Credentials::all()->where("Email",$Email)->where("Password",$Pass);
-        return $User->toJson();
+        return Response::Json($User);
     }
     public function Register(){
         $Register=new Credentials();
