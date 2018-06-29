@@ -7,8 +7,8 @@ use App\Credentials;
 
 class CredentialsController extends Controller
 {
-    public function Login($Email,$Pass){
-        $User=Credentials::all()->where("Email",$Email)->where("Password",$Pass);
+    public function Login($Email){
+        $User=Credentials::all()->where("Email",$Email);
         $json_array=array();
         $json_array[]=$User;
         return $json_array;
