@@ -17,4 +17,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::post('/Register','CredentialsController@Register');
-Route::get('/Login/{Email}/{Pass}','CredentialsController@Login');
+Route::get('/Login/{Email}','CredentialsController@Login');
