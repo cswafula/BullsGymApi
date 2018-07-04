@@ -43,7 +43,7 @@ class CredentialsController extends Controller
     }
     
     public function UpdateProfile($Email){
-        $Update=Credentials::findOrFail($Email);
+        $Update=Credentials::find($Email);
         $Update->Password=request('Password');
         $Update->Gender=request('Gender');
         $Update->Weight=request('Weight');
