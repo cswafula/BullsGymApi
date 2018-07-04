@@ -43,7 +43,7 @@ class CredentialsController extends Controller
     }
     
     public function UpdateProfile($Email){
-        $Update=new Credentials::all()->find($Email);
+        $Update=Credentials::all()->where("Email",$Email);
         $Update->Password=request('Password');
         $Update->Gender=request('Gender');
         $Update->Weight=request('Weight');
