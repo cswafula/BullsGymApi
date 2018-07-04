@@ -43,15 +43,15 @@ class CredentialsController extends Controller
     }
     
     public function UpdateProfile($Email){
-        $Update=Credentials::find($Email);
-        $Update->Password=request('Password');
-        $Update->Gender=request('Gender');
-        $Update->Weight=request('Weight');
-        $Update->BMI=request('BMI');
-        $Update->GymName=request('GymName');
-        $Update->Latitude=request('Latitude');
-        $Update->Longitude=request('Longitude');
-        $Update->save();
+        $user=Credentials::all()->where("Email",$Email);
+        $user->Password=request('Password');
+        $user->Gender=request('Gender');
+        $user->Weight=request('Weight');
+        $user->BMI=request('BMI');
+        $user->GymName=request('GymName');
+        $user->Latitude=request('Latitude');
+        $user->Longitude=request('Longitude');
+        $user->save();
     }
         
 }
