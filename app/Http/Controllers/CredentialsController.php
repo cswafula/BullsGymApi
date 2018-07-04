@@ -19,6 +19,7 @@ class CredentialsController extends Controller
         $Results[6]=$Fetched->Latitude;
         $Results[7]=$Fetched->Longitude;
         $Results[8]=$Fetched->ImageURL;
+        $Results[9]=$Fetched->id;
         
         if($Results == null){
             return "Empty";
