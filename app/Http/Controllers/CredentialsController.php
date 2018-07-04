@@ -51,7 +51,7 @@ class CredentialsController extends Controller
         $user->GymName=request('GymName');
         $user->Latitude=request('Latitude');
         $user->Longitude=request('Longitude');
-        $user->save();
+        $user->update();
     }
         
 }
