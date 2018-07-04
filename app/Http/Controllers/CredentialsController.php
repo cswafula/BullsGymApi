@@ -41,4 +41,17 @@ class CredentialsController extends Controller
         $Register->ImageURL=request('ImageURL');
         $Register->save();
     }
+    
+    public function UpdateProfile($Email){
+        $Update=Credentials::all()->find($Email);
+        $Update->Password=request('Password');
+        $Update->Gender=request('Gender');
+        $Update->Weight=request('Weight');
+        $Update->BMI=request('BMI');
+        $Update->GymName=request('GymName');
+        $Update->Latitude=request('Latitude');
+        $Update->Longitude=request('Longitude');
+        $Update->save();
+    }
+        
 }
