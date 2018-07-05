@@ -9,10 +9,6 @@ class WorkoutsController extends Controller
 {
     public function FetchWorkouts($Email){
         $User=Workouts::all()->where("Email",$Email);
-        
-        foreach($User as $person){
-            $users[]->$person->id = $person->Email;
-        }
         return json_encode(['Workouts'=>$User]);
      
     }
