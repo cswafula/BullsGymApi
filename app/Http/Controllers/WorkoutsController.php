@@ -12,7 +12,7 @@ class WorkoutsController extends Controller
         $User=Workouts::all()->where("Email",$Email);
         
         foreach($User as $person){
-            $users->person->id = $person->Email;
+            $users->$person->id = $person->Email;
         }
         return json_encode(['Workouts'=>$User]);
      
