@@ -11,13 +11,7 @@ class WorkoutsController extends Controller
         $User=Workouts::all()->where("Email",$Email);
         foreach($User as $Fetched){
         for($i=0; $i<10;$i++){
-        $Fetch[$i]=[
-        $Results[0]=$Fetched->Email;
-        $Results[1]=$Fetched->WorkoutName;
-        $Results[2]=$Fetched->Description;
-        $Results[3]=$Fetched->Reps;
-        $Results[4]=$Fetched->Date;
-        ];
+        $Fetch[$i]=$Results[0]=$Fetched->Email;
         }
         }
         return json_encode(['Workouts'=>$Fetch]);
