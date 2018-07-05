@@ -9,8 +9,7 @@ class WorkoutsController extends Controller
 {
     public function FetchWorkouts($Email){
         $User=Workouts::all()->where("Email",$Email);
-        $Fetch=mysql_fetch_assoc($User);
-        return $Fetch;
+        return json_encode(['Workouts'=>$User]);
      
     }
         
