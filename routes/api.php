@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/Register','CredentialsController@Register');
 Route::post('/Update/{Email}','CredentialsController@UpdateProfile');
 Route::get('/Login/{Email}/{Pass}','CredentialsController@Login');
+Route::get('/UserWorkouts/{Email}','WorkoutsController@FetchWorkouts');
+
