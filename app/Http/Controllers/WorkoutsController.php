@@ -22,7 +22,7 @@ class WorkoutsController extends Controller
         $Results[7]=$Fetched->Longitude;
         $Results[8]=$Fetched->ImageURL;
         $Results[9]=$Fetched->id;
-        ]
+        ];
         }
         }
         return json_encode(['Workouts'=>$Fetch]);
