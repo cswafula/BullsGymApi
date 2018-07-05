@@ -10,11 +10,13 @@ class WorkoutsController extends Controller
     public function FetchWorkouts($Email){
         $User=Workouts::all()->where("Email",$Email);
         foreach($User as $Fetched){
-        for($i=0; $i<5;$i++){
-        $Fetch[$i]=$Results[0]=$Fetched->Reps;
+        $Results[0]=$Fetched->Email;
+        $Results[1]=$Fetched->WorkoutName;
+        $Results[2]=$Fetched->Description;
+        $Results[3]=$Fetched->Reps;
+        $Results[4]=$Fetched->Date;
         }
-        }
-        return json_encode(['Workouts'=>$Fetch]);
+        return json_encode(['Workouts'=>$Results]);
      
     }
         
