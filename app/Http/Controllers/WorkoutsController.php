@@ -13,15 +13,10 @@ class WorkoutsController extends Controller
         for($i=0; $i<10;$i++){
         $Fetch[$i]=[
         $Results[0]=$Fetched->Email;
-        $Results[1]=$Fetched->Password;
-        $Results[2]=$Fetched->Gender;
-        $Results[3]=$Fetched->Weight;
-        $Results[4]=$Fetched->BMI;
-        $Results[5]=$Fetched->GymName;
-        $Results[6]=$Fetched->Latitude;
-        $Results[7]=$Fetched->Longitude;
-        $Results[8]=$Fetched->ImageURL;
-        $Results[9]=$Fetched->id;
+        $Results[1]=$Fetched->WorkoutName;
+        $Results[2]=$Fetched->Description;
+        $Results[3]=$Fetched->Reps;
+        $Results[4]=$Fetched->Date;
         ];
         }
         }
