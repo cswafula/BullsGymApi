@@ -9,8 +9,8 @@ class WorkoutsController extends Controller
 {
     public function FetchWorkouts($Email){
         $User=Workouts::all()->where("Email",$Email);
-        foreach($person in $User){
-            echo $User->id;
+        foreach($User as $person){
+            echo $person->id;
         }
         
     }
