@@ -8,10 +8,11 @@ use App\Workouts;
 class WorkoutsController extends Controller
 {
     public function FetchWorkouts($Email){
-    $User=Workouts::all()->where("Email",$Email);
-        for (int $x=0; $x<5; $x++){
-            echo "User: ".$User;
+        $User=Workouts::all()->where("Email",$Email);
+        foreach($person in $User){
+            echo $User->id;
         }
+        
     }
         
         /*return json_encode(['Workouts'=>$User]);
