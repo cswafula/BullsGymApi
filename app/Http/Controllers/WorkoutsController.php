@@ -11,7 +11,7 @@ class WorkoutsController extends Controller
         $User=Workouts::all()->where("Email",$Email);
         foreach($User as $Fetched){
         for($i=0; $i<10;$i++){
-        $Fetch[$i]={
+        $Fetch[$i]=[
         $Results[0]=$Fetched->Email;
         $Results[1]=$Fetched->Password;
         $Results[2]=$Fetched->Gender;
@@ -22,7 +22,7 @@ class WorkoutsController extends Controller
         $Results[7]=$Fetched->Longitude;
         $Results[8]=$Fetched->ImageURL;
         $Results[9]=$Fetched->id;
-        }
+        ]
         }
         }
         return json_encode(['Workouts'=>$Fetch]);
