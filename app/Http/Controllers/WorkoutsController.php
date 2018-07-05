@@ -9,8 +9,12 @@ class WorkoutsController extends Controller
 {
     public function FetchWorkouts($Email){
     $User=Workouts::all()->where("Email",$Email);
-    return json_encode(['Workouts'=>$User]);
+    for (int $x=0; $x<5; $x++){
+        echo "User: ".$User;
     }
+        
+        /*return json_encode(['Workouts'=>$User]);
+    }*/
     
     public function InsertWorkout(){ 
         $Workout=new Workouts();
@@ -21,4 +25,5 @@ class WorkoutsController extends Controller
         $Workout->Date=request('Date');
         $Workout->save();
     }
+   
 }
