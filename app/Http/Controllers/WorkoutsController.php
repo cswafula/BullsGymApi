@@ -9,7 +9,23 @@ class WorkoutsController extends Controller
 {
     public function FetchWorkouts($Email){
         $User=Workouts::all()->where("Email",$Email);
-        return json_encode(['Workouts'=>$User]);
+        foreach($User as $Fetched){
+        for($i=0; $i<10;$i++){
+        $Fetch[$i]={
+        $Results[0]=$Fetched->Email;
+        $Results[1]=$Fetched->Password;
+        $Results[2]=$Fetched->Gender;
+        $Results[3]=$Fetched->Weight;
+        $Results[4]=$Fetched->BMI;
+        $Results[5]=$Fetched->GymName;
+        $Results[6]=$Fetched->Latitude;
+        $Results[7]=$Fetched->Longitude;
+        $Results[8]=$Fetched->ImageURL;
+        $Results[9]=$Fetched->id;
+        }
+        }
+        }
+        return json_encode(['Workouts'=>$Fetch]);
      
     }
         
