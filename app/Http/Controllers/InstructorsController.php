@@ -9,6 +9,6 @@ class InstructorsController extends Controller
 {
     public function Fetch(){
         $User=Instructors::all();
-        return json_encode($User);
+        return json_encode(['Instructors'=>$User]);
     }
 }
